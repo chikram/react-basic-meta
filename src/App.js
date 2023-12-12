@@ -6,6 +6,7 @@ import Intro3 from "./component/Intro3"
 import ProbPassing from "./component/ProbPassing"
 import About from "./component/About"
 import Home from "./component/Home"
+import image from "./assets/images/alex.jpg"
 import { Routes, Route, Link } from "react-router-dom"
 /*function handleClick() {
   let randomNum = Math.floor(Math.random() * 3) + 1
@@ -26,6 +27,10 @@ function App() {
           <Route path="/about-us" element={<About />}></Route>
         </Routes>
       </div>
+      <img height={400} width={400} src={image} alt="alex" />
+
+      {/* second way of importing image*/}
+      <img height={400} width={400} src={require("./assets/images/alexandra.jpg")} alt="second way" />
 
       {/* <Nav />
       <Promo />
