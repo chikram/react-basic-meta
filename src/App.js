@@ -7,6 +7,7 @@ import ProbPassing from "./component/ProbPassing"
 import About from "./component/About"
 import Home from "./component/Home"
 import image from "./assets/images/alex.jpg"
+import ReactPlayer from "react-player"
 import { Routes, Route, Link } from "react-router-dom"
 /*function handleClick() {
   let randomNum = Math.floor(Math.random() * 3) + 1
@@ -15,6 +16,7 @@ import { Routes, Route, Link } from "react-router-dom"
   alert(`Computer number: ${randomNum}, Your guess: ${userInput}`)
 }*/
 function App() {
+  const vdurl = "https://youtu.be/LIosDR4m-i8"
   return (
     <>
       <div className="app">
@@ -31,7 +33,12 @@ function App() {
 
       {/* second way of importing image*/}
       <img height={400} width={400} src={require("./assets/images/alexandra.jpg")} alt="second way" />
-
+      <div>
+        <ReactPlayer url={vdurl}
+          playing={false}
+          volume={1}
+        />
+      </div>
       {/* <Nav />
       <Promo />
       <Intro1 />
